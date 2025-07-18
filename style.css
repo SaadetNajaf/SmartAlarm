@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  font-family: sans-serif;
+}
+
+.title {
+  color: white;
+  background-color: rgb(50 50 50);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid orange;
+}
+
+main {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+#clock,
+#date {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+#date {
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+#alarm-time {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 6px 15px;
+  font: 18px "Orbitron", sans-serif;
+  color: white;
+  background-color: #1e1e1e;
+  border: 1px solid orange;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#alarm-time:focus {
+  border-color: darkorange;
+  box-shadow: 0 0 5px orange;
+}
+
+#alarm-time::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.alarms-wrapper {
+  height: 50vh;
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.alarms-wrapper h2 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: white;
+}
+
+#alarms-list {
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+@media (min-width: 600px) {
+  #clock {
+    font-size: 60px;
+  }
+  #alarm-time,
+  button {
+    width: initial;
+  }
+}

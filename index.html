@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>Digital Alarm Clock</h1>
+    </div>
+    <main>
+      <div class="clock-wrapper">
+        <div id="clock">00:00:00</div>
+        <div id="date">DD/MM/YYYY</div>
+      </div>
+
+      <form id="alarm-form">
+        <input type="time" id="alarm-time" required />
+        <button type="submit">Add Alarm</button>
+      </form>
+    </main>
+    <div class="alarms-wrapper">
+      <h2>Alarmlar</h2>
+      <ol id="alarms-list">
+        There is currently no alarm set.
+      </ol>
+    </div>
+
+    <audio id="alarm-sound" src="./assets/alarm.wav" loop></audio>
+    <script src="./main.js"></script>
+  </body>
+</html>
